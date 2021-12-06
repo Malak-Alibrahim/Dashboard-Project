@@ -23,7 +23,8 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-dark bg-purple">
+      <!-- fixed top -->
       <div class="container-fluid">
         <!-- Sidebar Toggle Icon-->
         <button
@@ -37,7 +38,7 @@
         </button>
         <!-- Toggle list-->
         <div
-          class="offcanvas offcanvas-start"
+          class="offcanvas offcanvas-start bg-purple"
           tabindex="-1"
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -138,13 +139,92 @@
       <!-- The Main Content -->
       <div>
         <main>
+          <div class="container">
+            <div class="col">
+              <div class="row">
+                <h1>Dashboard</h1>
+                <p>Welcome to Dashboard</p>
+              </div>
+              <!-- Reports Cards -->
+              <div class="row">
+                <!-- 1st card-->
+                <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Sales</h4>
+                    <p class="card-text">text</p>
+                    <!-- TODO: ADD PRICE-->
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="products.html"
+                      class="text-white text-decoration-none"
+                      ><p>View Details</p></a
+                    >
+                  </div>
+                </div>
+                <!-- 2nd card-->
+                <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Orders</h4>
+                    <p class="card-text">text</p>
+                    <!-- TODO: ADD NUMBER-->
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="orders.html"
+                      class="text-white text-decoration-none"
+                      ><p>View Details</p></a
+                    >
+                  </div>
+                </div>
+                <!-- 3rd card-->
+                <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Visitors</h4>
+                    <p class="card-text">text</p>
+                    <!-- TODO: ADD Number-->
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="customers.html"
+                      class="text-white text-decoration-none"
+                      ><p>View Details</p></a
+                    >
+                  </div>
+                </div>
+                <!-- 4th card-->
+                <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
+                  <div class="card-body text-center">
+                    <h4 class="card-title">Conversion Rate</h4>
+                    <p class="card-text">text</p>
+                    <!-- TODO: ADD PERCENTAGE-->
+                  </div>
+                  <div class="card-footer">
+                    <a
+                      href="report.html"
+                      class="text-white text-decoration-none"
+                      ><p>View Details</p></a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="row"></div>
+              <div class="row"></div>
+              <div class="row"></div>
+            </div>
+          </div>
           <!-- Reports Cards -->
           <!-- Reports Chart -->
           <!-- Customers Table -->
         </main>
 
         <!-- Customers Table -->
-        <footer></footer>
+        <footer>
+          <!-- <div class="container border-dark border-top mt-3 p-2">
+            <span class="text-muted">Copyright &copy; 2021</span>
+          </div> -->
+        </footer>
       </div>
     </div>
 
