@@ -24,7 +24,6 @@
 
   <body>
     <nav class="navbar navbar-dark bg-purple">
-      <!-- fixed top -->
       <div class="container-fluid">
         <!-- Sidebar Toggle Icon-->
         <button
@@ -36,6 +35,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <!-- Toggle list-->
         <div
           class="offcanvas offcanvas-start bg-purple"
@@ -55,7 +55,7 @@
             ></button>
           </div>
           <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -101,10 +101,14 @@
                   aria-labelledby="offcanvasNavbarDropdown"
                 >
                   <li>
-                    <a class="dropdown-item" href="report.html">New Orders</a>
+                    <a class="dropdown-item" href="report.html"
+                      >Monthly Reports</a
+                    >
                   </li>
                   <li>
-                    <a class="dropdown-item" href="report.html">Past Orders</a>
+                    <a class="dropdown-item" href="report.html"
+                      >Yearly Reports</a
+                    >
                   </li>
                 </ul>
               </li>
@@ -114,19 +118,38 @@
             </ul>
           </div>
         </div>
+
         <!-- Navbar Brand -->
         <a class="navbar-brand px-3 me-auto" href="#">NRT Solution</a>
+
         <!-- Navbar Search -->
         <form class="d-flex">
           <input
-            class="form-control me-2"
+            class="form-control me-auto"
             type="search"
-            placeholder="Search"
+            placeholder="Search for..."
             aria-label="Search"
           />
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <button class="btn bg-pink" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
         </form>
-        <!-- TODO: User Profile -->
+
+        <!-- User Profile -->
+        <div class="dropdown mx-4">
+          <button
+            type="button"
+            class="btn bg-purple dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            <i class="fas fa-user"></i>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">My Account</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Log out</a></li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -135,7 +158,6 @@
       <!-- <div>
         <nav></nav>
       </div> -->
-
       <!-- The Main Content -->
       <div>
         <main>
@@ -149,63 +171,62 @@
               <div class="row">
                 <!-- 1st card-->
                 <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">Sales</h4>
-                    <p class="card-text">text</p>
-                    <!-- TODO: ADD PRICE-->
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="products.html"
-                      class="text-white text-decoration-none"
-                      ><p>View Details</p></a
-                    >
-                  </div>
+                  <a
+                    href="products.html"
+                    class="text-white text-decoration-none"
+                  >
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Sales</h4>
+                      <!-- TODO: ADD PRICE-->
+                      <p class="card-text">text</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>View Details <i class="fas fa-arrow-right"></i></p>
+                    </div>
+                  </a>
                 </div>
+
                 <!-- 2nd card-->
                 <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">Orders</h4>
-                    <p class="card-text">text</p>
-                    <!-- TODO: ADD NUMBER-->
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="orders.html"
-                      class="text-white text-decoration-none"
-                      ><p>View Details</p></a
-                    >
-                  </div>
+                  <a href="orders.html" class="text-white text-decoration-none">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Orders</h4>
+                      <!-- TODO: ADD NUMBER-->
+                      <p class="card-text">text</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>View Details <i class="fas fa-arrow-right"></i></p>
+                    </div>
+                  </a>
                 </div>
                 <!-- 3rd card-->
                 <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">Visitors</h4>
-                    <p class="card-text">text</p>
-                    <!-- TODO: ADD Number-->
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="customers.html"
-                      class="text-white text-decoration-none"
-                      ><p>View Details</p></a
-                    >
-                  </div>
+                  <a
+                    href="customers.html"
+                    class="text-white text-decoration-none"
+                  >
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Visitors</h4>
+                      <!-- TODO: ADD Number-->
+                      <p class="card-text">text</p>
+                    </div>
+                    <div class="card-footer">
+                      <p>View Details <i class="fas fa-arrow-right"></i></p>
+                    </div>
+                  </a>
                 </div>
                 <!-- 4th card-->
                 <div class="card bg-pink mb-3 m-3" style="max-width: 18rem">
-                  <div class="card-body text-center">
-                    <h4 class="card-title">Conversion Rate</h4>
-                    <p class="card-text">text</p>
-                    <!-- TODO: ADD PERCENTAGE-->
-                  </div>
-                  <div class="card-footer">
-                    <a
-                      href="report.html"
-                      class="text-white text-decoration-none"
-                      ><p>View Details</p></a
-                    >
-                  </div>
+                  <a href="report.html" class="text-white text-decoration-none">
+                    <div class="card-body text-center">
+                      <h4 class="card-title">Conversion Rate</h4>
+                      <p class="card-text">text</p>
+                      <!-- TODO: ADD PERCENTAGE-->
+                    </div>
+                    <div class="card-footer">
+                      <p>View Details <i class="fas fa-arrow-right"></i></p>
+                    </div>
+                  </a>
                 </div>
               </div>
               <!-- Reports Chart -->
