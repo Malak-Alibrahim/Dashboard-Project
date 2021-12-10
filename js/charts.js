@@ -77,8 +77,8 @@ new Chart("myPieChart", {
         data: [112, 218, 95],
         backgroundColor: [
           "rgba(220, 92, 124, 1)",
-          "rgb(54, 162, 235)",
-          "rgb(255, 205, 86)",
+          "rgb(64, 29, 186)",
+          "rgb(192,192,192)",
         ],
       },
     ],
