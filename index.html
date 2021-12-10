@@ -23,6 +23,36 @@
     ></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!--Adding Datatables Style CDN-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"
+    />
+    <!-- Adding Datatables CDN -->
+    <script
+      type="text/javascript"
+      charset="utf8"
+      src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"
+    ></script>
+    <!-- Initializing Datatable-->
+    <script>
+      $(document).ready(function () {
+        $("#customers").DataTable({
+          ajax: "./json/data.json",
+          columns: [
+            { data: "name" },
+            { data: "address" },
+            { data: "city" },
+            { data: "age" },
+            { data: "last visit" },
+            { data: "orders" },
+          ],
+        });
+      });
+    </script>
   </head>
 
   <body>
@@ -291,12 +321,23 @@
                     <div class="card-header">
                       <i class="fas fa-user-friends"></i> Customers
                     </div>
-                    <div class="card-body">hi</div>
+                    <div class="card-body">
+                      <table id="customers" class="display" style="width: 100%">
+                        <thead>
+                          <tr>
+                            <th>Name</th>
+                            <th>Address</th>
+                            <th>City</th>
+                            <th>Age</th>
+                            <th>Last Visit</th>
+                            <th>Orders</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              
             </div>
           </div>
         </main>
