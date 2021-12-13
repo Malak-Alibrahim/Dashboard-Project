@@ -13,7 +13,6 @@ var ratChart = document.getElementById("myLinearChart");
 new Chart("myAreaChart", {
   type: "line",
   data: {
-    //Utils.months({count: 7})
     labels: [
       "June",
       "July",
@@ -25,17 +24,23 @@ new Chart("myAreaChart", {
     ],
     datasets: [
       {
-        label: "Orders",
+        label: "Orders by month",
         data: [15, 28, 33, 54, 160, 210, 190],
         borderColor: "rgba(220, 92, 124, 1)",
-        borderWidth: 3,
-        fill: {
-          target: {value: 100},
-          above: 'rgb(64, 29, 186)',   // Area will be purple above the origin
-          below: 'rgba(218, 65, 103, 1)'    // And blue pink the origin
-        }
+        borderWidth: 2,
+        fill: true,
+        backgroundColor: ["rgb(155,152,174)"]
       },
     ],
+  },
+  options: {
+    tension: 0.3,
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+
   },
 });
 
@@ -83,6 +88,9 @@ new Chart("myPieChart", {
       },
     ],
   },
+  options: {
+    maintainAspectRatio: false,
+  },
 });
 
 new Chart("myLinearChart", {
@@ -103,8 +111,15 @@ new Chart("myLinearChart", {
         data: [1, 2.9, 3.2, 3.5, 4.6, 4, 3.5],
         borderColor: "rgba(220, 92, 124, 1)",
         fill: true,
-        borderWidth: 3,
+        borderWidth: 2,
       },
     ],
+  },
+  options: {
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
   },
 });
