@@ -70,7 +70,7 @@ const products = [
     status: "Free Shopping",
   },
 ];
-
+// get products object data
 document.getElementById("product").innerHTML = products.map(
   (element) =>
   `
@@ -78,10 +78,11 @@ document.getElementById("product").innerHTML = products.map(
     <div class="card">
       <div class="row">
         <div class="col-3">
-          <!-- add image -->
+          <!-- image -->
           <img src="${element.image}" class="img-fluid rounded-start" alt="..." />
         </div>
         <div class="col-6">
+          <!-- product header & info -->
           <div class="card-body">
             <h5 class="card-title">${element.name}</h5>
             <p class="card-text">${element.description}</p>
@@ -90,12 +91,12 @@ document.getElementById("product").innerHTML = products.map(
   
         <div class="col-3">
           <div class="card-body">
+            <!-- product price & status -->
             <h5 class="card-title">${element.price} SAR</h5>
             <p class="card-text text-success fw-bold">${element.status}</p>
+            <!-- Buttons -->
             <div class="d-grid gap-1">
-              <button type="button" class="btn bg-purple btn-block">
-                Details
-              </button>
+              <button type="button" class="btn bg-purple btn-block">Details</button>
               <button type="button" class="btn bg-pink btn-block">Delete</button>
             </div>
           </div>

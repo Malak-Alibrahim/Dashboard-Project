@@ -89,7 +89,11 @@ new Chart("myPieChart", {
     ],
   },
   options: {
-    maintainAspectRatio: false,
+    // maintainAspectRatio: false,
+    aspectRatio: 2,
+    legend: {
+      display: false
+    },
   },
 });
 
