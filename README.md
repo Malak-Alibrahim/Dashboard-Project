@@ -31,7 +31,7 @@ Simple responsive front-end dashboard. This dashboard uses the Bootstrap styles 
 - Use Tidio integrations to add chatbot in dashboard website.
 
 ### The Dashboard  Demo
-You can visit Dashboard website [link here](com/)
+You can visit Dashboard website [link here](https://malak-alibrahim.github.io/Dashboard-Project//)
 
 ## Future Features:
 - Add Products Details Page.
